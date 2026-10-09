@@ -1,0 +1,86 @@
+/* ==========================================================================
+   PALETA DE COLORES Y FUENTES (Tema: Tiempo / Reloj contra el reloj)
+   ========================================================================== */
+@import url('https://googleapis.com');
+
+body {
+    background-color: #121010; /* Fondo negro carbón oscuro */
+    color: #e6dfd3;            /* Texto color crema suave para contrastar */
+    font-family: 'Share Tech Mono', monospace; /* Tipografía estilo reloj digital */
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    text-align: center;        /* Centra el contenido para simular una esfera/pantalla */
+    line-height: 1.6;
+}
+
+/* ==========================================================================
+   TÍTULOS Y TEXTO
+   ========================================================================== */
+h1 {
+    font-size: 3.5rem;
+    color: #ff3333;            /* Rojo alarma */
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    margin-bottom: 5px;
+    text-shadow: 0 0 10px rgba(255, 51, 51, 0.5);
+    /* Animación: Hace que el título parpadee como un reloj despertador */
+    animation: alarmBlink 1.5s infinite;
+}
+
+h2 {
+    font-family: 'Special Elite', cursive; /* Fuente estilo máquina de escribir vieja */
+    color: #d4af37;            /* Oro viejo / Bronce */
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+}
+
+p {
+    font-size: 1.1rem;
+    background-color: #1a1717;  /* Caja oscura para el texto */
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #3a302c; /* Borde sutil color óxido */
+    box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.6);
+    margin-bottom: 40px;
+    text-align: justify;       /* Texto alineado limpiamente */
+}
+
+/* ==========================================================================
+   MULTIMEDIA (Imagen, Video y Audio)
+   ========================================================================== */
+/* Estilos compartidos para la imagen y el video */
+img, video {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto 30px auto;
+    border-radius: 6px;
+    border: 3px double #d4af37; /* Borde doble estilo marco de reloj antiguo */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.7);
+    transition: transform 0.3s ease;
+}
+
+/* Efecto interactivo al pasar el cursor sobre la imagen o video */
+img:hover, video:hover {
+    transform: scale(1.02); /* Se acerca ligeramente */
+    border-color: #ff3333;   /* Cambia a rojo de urgencia */
+}
+
+/* Estilos para el reproductor de audio */
+audio {
+    display: block;
+    margin: 40px auto;
+    width: 100%;
+    max-width: 400px;
+    filter: sepia(0.6) contrast(1.2) invert(0.1); /* Tinte retro/bronce al reproductor */
+}
+
+/* ==========================================================================
+   ANIMACIONES
+   ========================================================================== */
+@keyframes alarmBlink {
+    0%, 100% { opacity: 1; text-shadow: 0 0 15px rgba(255, 51, 51, 0.8); }
+    50% { opacity: 0.6; text-shadow: 0 0 5px rgba(255, 51, 51, 0.2); }
+}
